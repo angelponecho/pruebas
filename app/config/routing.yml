@@ -1,0 +1,5 @@
+zemba_workout:
+    resource: "@ZembaWorkoutBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
