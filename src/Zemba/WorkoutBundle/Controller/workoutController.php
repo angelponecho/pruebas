@@ -13,7 +13,7 @@ use Zemba\WorkoutBundle\Form\workoutType;
 /**
  * workout controller.
  *
- * @Route("/workoutgit ")
+ * @Route("/workout")
  */
 class workoutController extends Controller
 {
@@ -21,7 +21,7 @@ class workoutController extends Controller
     /**
      * Lists all workout entities.
      *
-     * @Route("/", name="workoutcrud")
+     * @Route("", name="workoutcrud")
      * @Method("GET")
      * @Template()
      */
@@ -38,7 +38,7 @@ class workoutController extends Controller
     /**
      * Creates a new workout entity.
      *
-     * @Route("/", name="workoutcrud_create")
+     * @Route("", name="workoutcrud_create")
      * @Method("POST")
      * @Template("ZembaWorkoutBundle:workout:new.html.twig")
      */
