@@ -1,45 +1,45 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>workout list</h1>
+    <h1>Trabajos</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Activity</th>
-                <th>Occurrencedate</th>
-                <th>Hours</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('workoutcrud_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.activity }}</td>
-                <td>{% if entity.occurrenceDate %}{{ entity.occurrenceDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.hours }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('workoutcrud_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('workoutcrud_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="row top-buffer">
+        <div class="span3">
+            <a href="{{ path('workoutcrud_new') }}" class="btn btn-large btn-block btn-primary">New Trabajo</a>
+        </div>
+    </div>
 
-        <ul>
-        <li>
-            <a href="{{ path('workoutcrud_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+    <div class="row-fluid top-buffer">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Actividad</th>
+                <th>Horas</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td>{% if entity.occurrenceDate %}{{ entity.occurrenceDate|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ entity.activity }}</td>
+                    <td>{{ entity.hours }}</td>
+                    <td>
+                        <ul>
+                            <div class="span2">
+                                <a href="{{ path('workoutcrud_show', { 'id': entity.id }) }}" class="btn btn-large btn-block btn-default">Ver</a>
+                            </div>
+                            <div class="span2">
+                                <a href="{{ path('workoutcrud_edit', { 'id': entity.id }) }}" class="btn btn-large btn-block btn-inverse">Editar</a>
+                            </div>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+

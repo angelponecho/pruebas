@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39bca3b7-ea3c-4242-b343-b600d07d33fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Controller/workoutController.php" afterPath="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Controller/workoutController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/edit.html.twig" afterPath="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/index.html.twig" afterPath="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cursoSymfony.iws" />
@@ -20,27 +22,53 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+              <entry file="file:///Volumes/Datos/mio/curso-symfony/09-external assets/src/Zenva/WorkoutBundle/Resources/views/Workout/index.html.twig">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="0" column="0" selection-start="0" selection-end="1536" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="750">
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="edit.html.twig" pinned="false" current="false" current-in-tab="true">
+              <entry file="file:///Volumes/Datos/mio/curso-symfony/09-external assets/src/Zenva/WorkoutBundle/Resources/views/Workout/edit.html.twig">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="0" column="0" selection-start="0" selection-end="1116" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="cursoSymfony" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="workoutController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Controller/workoutController.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="31" selection-start="1396" selection-end="1396" vertical-scroll-proportion="-25.0" vertical-offset="180" max-vertical-offset="3795">
-              <folding>
-                <element signature="e#50#95#0" expanded="true" />
-              </folding>
+            <state line="36" column="25" selection-start="1420" selection-end="1420" vertical-scroll-proportion="-19.375" vertical-offset="75" max-vertical-offset="765">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/index.html.twig">
+      <file leaf-file-name="edit.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+            <state line="13" column="22" selection-start="216" selection-end="216" vertical-scroll-proportion="0.32445922" vertical-offset="0" max-vertical-offset="601">
               <folding />
             </state>
           </provider>
@@ -70,6 +98,10 @@
         <option value="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Controller/workoutController.php" />
+        <option value="/Volumes/Datos/mio/curso-symfony/09-external assets/src/Zenva/WorkoutBundle/Resources/views/Workout/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/edit.html.twig" />
       </list>
     </option>
   </component>
@@ -120,6 +152,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cursosymfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cursosymfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cursosymfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -259,19 +305,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cursosymfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cursosymfony" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Zemba" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WorkoutBundle" />
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,10 +415,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29935622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29935622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -437,18 +493,67 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Form/workoutType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.7083333" vertical-offset="89" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Controller/workoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="31" selection-start="1396" selection-end="1396" vertical-scroll-proportion="-25.0" vertical-offset="180" max-vertical-offset="3795">
+        <state line="117" column="0" selection-start="3032" selection-end="3032" vertical-scroll-proportion="11.48" vertical-offset="2329" max-vertical-offset="3795">
           <folding>
             <element signature="e#50#95#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///Volumes/Datos/mio/curso-symfony/09-external assets/src/Zenva/WorkoutBundle/Resources/views/Workout/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1536" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="90" selection-start="332" selection-end="332" vertical-scroll-proportion="0.17470881" vertical-offset="0" max-vertical-offset="601">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="904">
+        <state line="36" column="25" selection-start="1420" selection-end="1420" vertical-scroll-proportion="-19.375" vertical-offset="75" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/Datos/mio/curso-symfony/09-external assets/src/Zenva/WorkoutBundle/Resources/views/Workout/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1116" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Zemba/WorkoutBundle/Resources/views/workout/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="22" selection-start="216" selection-end="216" vertical-scroll-proportion="0.32445922" vertical-offset="0" max-vertical-offset="601">
           <folding />
         </state>
       </provider>
