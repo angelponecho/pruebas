@@ -14,17 +14,59 @@
 	<h2>VARIABLES</h2>
   	<p>Las declaramos con <strong>set</strong> </p>
 		<pre>
-			{% set foo = 'foo' %}
-			{% set foo = [1, 2] %}
-			{% set foo %}<div id="pagination">...</div>{% endset %}
+			{% set variable = 'foo' %}
+			{% set variable = [1, 2] %}
+			{% set variable %}<div id="pagination">...</div>{% endset %}
 		</pre>
 	<p> y luego las llamamos con las llaves</p>
 	
 	<pre>
-			{% set foo = 'foo' %}
-			{% set foo = [1, 2] %}
-			{% set foo %}<div id="pagination">...</div>{% endset %}
-		</pre>
+			{{ variable }}
+	</pre>
+	
+	<h2>FILTROS</h2>
+  	<p>Los filtros pueden modificar variables. Los filtros están separados de la variable por un símbolo de tubo (|)</p>
+	<pre>
+		{{ variable | lower }} {# convierte a minúsculas la cadena #}
+		{{ variable | title }} {# pone en mayuscula cada palabra de la cadena #}
+		{{ variable | date("m/d/Y", "Europe/Paris") }}
+		{% filter upper %} Todo el texto de aquí será convertido a mayúsculas{% endfilter %}
+	</pre>
+		
+	<h3>OPERACIONES, LÓGICA, COMPARACIONES, OPERADOR DE CONTENCION</h3>
+	<p>Twig te permite calcular valores (+-/...)</p>
+	<pre>{{ 1 + 1 }} is 2.</pre>
+	<p>combinar varias expresiones con los siguientes operadores : and ,or ,not y  comparaciones:==, !=, <, >, >=, y <=</p>
+	<pre>{% if temperatura > 18 and temperatura < 27 %}
+    		<p>Hece un dia cojonudo pa ir a comer al parque.</p>
+		{% endif %}.
+	</pre>
+	
+	<h2>ESTRUCTURAS DE CONTROL</h2>
+  	<p>Condicionales ( if/elseif/else), bucles for, así como cosas tales como bloques. Las estructuras de control aparecen dentro de bloques {% ... %}.</p>
+	<h3>IF -ELSE</h3>
+	<pre>
+		{% if temperatura > 18 and temperatura < 27 %}
+    		<p>Hece un dia cojonudo pa ir a comer al parque.</p>
+		{% endif %}
+	</pre>
+	<h3>FOR</h3>
+	<p>Si necesitas  una secuencia de números, se usa el operador ..</p>
+	<pre>
+		{% for i in 0..10 %}
+    		* {{ i }}
+		{% endfor %}
+	</pre>
+	<h3>FOR e IF</h3>
+	<p>Si necesitas  una secuencia de números, se usa el operador ..</p>
+	<pre>
+		<ul>
+    		{% for user in users if user.active %}
+        	<li>{{ user.username|e }}</li>
+    		{% endfor %}
+		</ul>
+	</pre>
+
 		
 	<h2>HERENCIA ENTRE PLANTILLAS</h2>	
 	<p>permite crear un modelo de <strong>plantilla base</strong> que contenga todos los elementos comunes del sitio y definir los bloques que las <strong>plantillas descendientes</strong> pueden sustituir.</p>
