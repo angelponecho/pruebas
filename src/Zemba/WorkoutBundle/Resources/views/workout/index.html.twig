@@ -1,111 +1,108 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-<div class="row-fluid">
-	<h2> LO BASICO DE TWIG</h2>
+<div class="container">
+    <div class="row-fluid">
+	<h2> QUE ES TWIG</h2>
 	<p>Se trata de un motor de plantillas libre para el lenguaje PHP</p>
 	<h2> LO BASICO DE TWIG</h2>
-	    <pre>
+	    <pre>{% verbatim %}
 			{# comentario #}
 			{{ mostrar_algo }}
 			{% hacer algo %}
-		</pre>
-		
+	{% endverbatim %}</pre>
+
 	<h2>VARIABLES</h2>
   	<p>Las declaramos con <strong>set</strong> </p>
-		<pre>
+		<pre>{% verbatim %}
 			{% set variable = 'foo' %}
 			{% set variable = [1, 2] %}
-			{% set variable %}<div id="pagination">...</div>{% endset %}
-		</pre>
+			{% set variable %}&ltdiv id="pagination"&gt...&lt/div &gt{% endset %}
+		{% endverbatim %}</pre>
 	<p> y luego las llamamos con las llaves</p>
-	
-	<pre>
+
+	<pre>{% verbatim %}
 			{{ variable }}
-	</pre>
-	
+	{% endverbatim %}</pre>
+
 	<h2>FILTROS</h2>
   	<p>Los filtros pueden modificar variables. Los filtros están separados de la variable por un símbolo de tubo (|)</p>
-	<pre>
+	<pre>{% verbatim %}
 		{{ variable | lower }} {# convierte a minúsculas la cadena #}
 		{{ variable | title }} {# pone en mayuscula cada palabra de la cadena #}
 		{{ variable | date("m/d/Y", "Europe/Paris") }}
 		{% filter upper %} Todo el texto de aquí será convertido a mayúsculas{% endfilter %}
-	</pre>
-		
+	{% endverbatim %}</pre>
+
 	<h3>OPERACIONES, LÓGICA, COMPARACIONES, OPERADOR DE CONTENCION</h3>
 	<p>Twig te permite calcular valores (+-/...)</p>
-	<pre>{{ 1 + 1 }} is 2.</pre>
+	<pre>{% verbatim %}{{ 1 + 1 }} is 2.{% endverbatim %}</pre>
 	<p>combinar varias expresiones con los siguientes operadores : and ,or ,not y  comparaciones:==, !=, <, >, >=, y <=</p>
-	<pre>{% if temperatura > 18 and temperatura < 27 %}
+	<pre>{% verbatim %}{% if temperatura > 18 and temperatura < 27 %}
     		<p>Hece un dia cojonudo pa ir a comer al parque.</p>
 		{% endif %}.
-	</pre>
-	
+	{% endverbatim %}</pre>
+
 	<h2>ESTRUCTURAS DE CONTROL</h2>
-  	<p>Condicionales ( if/elseif/else), bucles for, así como cosas tales como bloques. Las estructuras de control aparecen dentro de bloques {% ... %}.</p>
+  	<p>Condicionales ( if/elseif/else), bucles for, así como cosas tales como bloques. Las estructuras de control aparecen dentro de bloques { % ... % }.</p>
 	<h3>IF -ELSE</h3>
-	<pre>
+	<pre>{% verbatim %}
 		{% if temperatura > 18 and temperatura < 27 %}
     		<p>Hece un dia cojonudo pa ir a comer al parque.</p>
 		{% endif %}
-	</pre>
+	{% endverbatim %}</pre>
 	<h3>FOR</h3>
 	<p>Si necesitas  una secuencia de números, se usa el operador ..</p>
-	<pre>
+	<pre>{% verbatim %}
 		{% for i in 0..10 %}
     		* {{ i }}
 		{% endfor %}
-	</pre>
+	{% endverbatim %}</pre>
 	<h3>FOR e IF</h3>
 	<p>Si necesitas  una secuencia de números, se usa el operador ..</p>
-	<pre>
+	<pre>{% verbatim %}
 		<ul>
     		{% for user in users if user.active %}
         	<li>{{ user.username|e }}</li>
     		{% endfor %}
 		</ul>
-	</pre>
+	{% endverbatim %}</pre>
 
-		
-	<h2>HERENCIA ENTRE PLANTILLAS</h2>	
+
+	<h2>HERENCIA ENTRE PLANTILLAS</h2>
 	<p>permite crear un modelo de <strong>plantilla base</strong> que contenga todos los elementos comunes del sitio y definir los bloques que las <strong>plantillas descendientes</strong> pueden sustituir.</p>
 	<h3>EJEMPLO PLANTILLA BASE</h3>
-	<pre>
-			<html>
-				<head>
+	<pre>{% verbatim %}
+			&lthtml&gt
+				&lthea&gt
 					{% block head %}{% endblock %}
-				</head>
-				<body>
-					<div id="content">
+				&lt/head&gt
+				&lttbody&gt
+					&ltdiv id="content"&gt
 					  {% block content %}{% endblock %}
-					</div>
-				</body>
-			</html>
-	</pre>
+					&lt/div&gt
+				&lt/body&gt
+			&lt/html&gt
+	{% endverbatim %}</pre>
 	<h3>EJEMPLO PLANTILLA DESCENDIENTE</h3>
-	<pre>
+	<pre>{% verbatim %}
 			{% extends "base.html" %}
 				{% block head %}
 					{{ parent() }}
-					<script type="text/javascript" src="jquery.min.191.js"></script>
+            &ltscript type="text/javascript" src="jquery.min.191.js"&gt&lt/script&gt
 				{% endblock %}
-				 
+
 				{% block content %}
-					<h1>Índice</h1>
-					<p>Hola mundo!</p>
+            &lth1&gtÍndice&gt/h1&gt
+            &ltp&gtHola mundo!&gt/p&gt
 				{% endblock %}
-	</pre>
+	{% endverbatim %}</pre>
 
 </div>
 
 <div class="row-fluid">
 	<h2>Ejemplo de funcionamiento con Symfony</h2>
-    <div class="row top-buffer">
-        <div class="span3">
-            <a href="{{ path('workoutcrud_new') }}" class="btn btn-large btn-block btn-primary">New Trabajo</a>
-        </div>
-    </div>
+
 
     <div class="row-fluid top-buffer">
         <table class="table table-striped">
@@ -125,19 +122,25 @@
                     <td>{{ entity.hours }}</td>
                     <td>
                         <ul>
-                            <div class="span2">
+                            <div class="span3">
                                 <a href="{{ path('workoutcrud_show', { 'id': entity.id }) }}" class="btn btn-large btn-block btn-default">Ver</a>
                             </div>
-                            <div class="span2">
+                            <div class="span3">
                                 <a href="{{ path('workoutcrud_edit', { 'id': entity.id }) }}" class="btn btn-large btn-block btn-inverse">Editar</a>
                             </div>
-                        </ul>
+                        </ul>git
                     </td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
     </div>
+    <div class="row top-buffer">
+        <div class="span3">
+            <a href="{{ path('workoutcrud_new') }}" class="btn btn-large btn-block btn-primary">New Trabajo</a>
+        </div>
+    </div>
+</div>
 </div>
 {% endblock %}
 
