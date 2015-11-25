@@ -34,7 +34,32 @@
 		{% filter upper %} Todo el texto de aquí será convertido a mayúsculas{% endfilter %}
 	{% endverbatim %}</pre>
 
-	<h3>OPERACIONES, LÓGICA, COMPARACIONES, OPERADOR DE CONTENCION</h3>
+        <h2>FUNCIONES</h2>
+        <p> Generan contenido. Las funciones son llamadas por su nombre seguido de paréntesis (). Algunos eejmplos son :<br>
+            <ul>
+                <li> <strong>range</strong>Devuelve una lista conteniendo una progresión aritmética de entero <br>
+                <pre>{% verbatim %}
+		                {% for i in range(0, 3) %}
+                            {{ i }},
+                         {% endfor %}
+	            {% endverbatim %}</pre>
+                </li>
+                <li> <strong>cycle</strong>a recorrer un array de valores<br>
+                    <pre>{% verbatim %}
+                            {% set frutas = [’manzana’, ’naranja’, ’cítricos’] %}
+                                {% for i in 0..10 %}
+                                    {{ cycle(frutas, i) }}
+                                {% endfor %}
+                    {% endverbatim %}</pre>
+                <li> <strong>Otras</strong>block,constant, atribute... <br>
+                </li>
+            </ul>
+
+
+            </p>
+
+
+	<h2>OPERACIONES, LÓGICA, COMPARACIONES, OPERADOR DE CONTENCION</h2>
 	<p>Twig te permite calcular valores (+-/...)</p>
 	<pre>{% verbatim %}{{ 1 + 1 }} is 2.{% endverbatim %}</pre>
 	<p>combinar varias expresiones con los siguientes operadores : and ,or ,not y  comparaciones:==, !=, <, >, >=, y <=</p>
@@ -69,7 +94,8 @@
 	{% endverbatim %}</pre>
 
 
-	<h2>HERENCIA ENTRE PLANTILLAS</h2>
+	<h2>INCLUDE Y HERENCIA ENTRE PLANTILLAS</h2>
+     <p>Include sirve para incluir plantillas. Ej{% verbatim %}{% include ’sidebar.html’ %}{% endverbatim %} (la plantilla incliuda puede acceder al padre)</p>
 	<p>permite crear un modelo de <strong>plantilla base</strong> que contenga todos los elementos comunes del sitio y definir los bloques que las <strong>plantillas descendientes</strong> pueden sustituir.</p>
 	<h3>EJEMPLO PLANTILLA BASE</h3>
 	<pre>{% verbatim %}
