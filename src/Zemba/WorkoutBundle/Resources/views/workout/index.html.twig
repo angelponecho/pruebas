@@ -3,7 +3,7 @@
 {% block body -%}
 <div class="container">
     <div class="row-fluid">
-	<h2> QUE ES TWIG</h2>
+	<h1> QUE ES TWIG</h1>
 	<p>Se trata de un motor de plantillas libre para el lenguaje PHP</p>
 	<h2> LO BASICO DE TWIG</h2>
 	    <pre>{% verbatim %}
@@ -93,9 +93,21 @@
 		</ul>
 	{% endverbatim %}</pre>
 
+    <h2>MACROS</h2>
+    <p>Las macros son comparables con funciones en lenguajes de programación.Las macros se pueden definir en cualquier plantilla, y es necesario «importarlas» </p>
+	<pre>{% verbatim %}
+		{% macro input(name, value, type, size) %}
+            <input type="{{ type }}"
+                   name="{{ name }}"
+                   value="{{ value }}"
+                   size="{{ size }}" />
+        {% endmacro %}
+    {% endverbatim %}
+    </pre>
 
-	<h2>INCLUDE Y HERENCIA ENTRE PLANTILLAS</h2>
-     <p>Include sirve para incluir plantillas. Ej{% verbatim %}{% include ’sidebar.html’ %}{% endverbatim %} (la plantilla incliuda puede acceder al padre)</p>
+
+	<h2>IMPORT, INCLUDE Y HERENCIA ENTRE PLANTILLAS</h2>
+     <p>Import es para "importar macros" Ej:  Ej{% verbatim %}{% import "formularios.html" as forms %}{% endverbatim %}Include sirve para incluir plantillas. Ej{% verbatim %}{% include ’sidebar.html’ %}{% endverbatim %} (la plantilla incliuda puede acceder al padre)</p>
 	<p>permite crear un modelo de <strong>plantilla base</strong> que contenga todos los elementos comunes del sitio y definir los bloques que las <strong>plantillas descendientes</strong> pueden sustituir.</p>
 	<h3>EJEMPLO PLANTILLA BASE</h3>
 	<pre>{% verbatim %}
