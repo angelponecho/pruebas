@@ -3,21 +3,24 @@
 
 
 {% block body -%}
-<h1>Editar trabajo</h1>
+<div class="container">
+    <div class="row-fluid">
+        <h1>Editar trabajo</h1>
 
+            <div class="row-fluid top-buffer">
+                {{ form(edit_form) }}
+            </div>
+            <div class="row top-buffer">
 
-    <div class="row-fluid top-buffer">
-        {{ form(edit_form) }}
-    </div>
-    <div class="row top-buffer">
+                <div class="span3">
+                    <a href="{{ path('workoutcrud') }}" class="btn btn-large btn-block btn-default">Volver</a>
+                </div>
 
-        <div class="span3">
-            <a href="{{ path('workoutcrud') }}" class="btn btn-large btn-block btn-default">Back</a>
+                <div class="span3">
+                  {{ form(delete_form) }}
+                </div>
+            </div>
+            </div>
         </div>
-
-        <div class="span3">
-          {{ form(delete_form) }}
-        </div>
-    </div>
-    </div>
+</div>
 {% endblock %}
